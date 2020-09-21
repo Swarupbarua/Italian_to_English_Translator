@@ -15,7 +15,7 @@ For text detection we have used pretrained EAST_Text_detection model, tesseract 
 6. run_attention_from_image.py - file is to run my model. This file will pick images from 'test_data' frolder and translate them.
 
 ## Below is a sample of the process.
-<img src='https://github.com/Swarupbarua/Live-cam-translator/blob/master/result.png?raw=true' width="800" height="400" />
+<img src='https://github.com/Swarupbarua/Italian_to_English_Translator/blob/master/result.png?raw=true' width="800" height="400" />
 
 ## Limitation
 1. Detected text with angle faces issue while translating.
