@@ -10,7 +10,7 @@ For text detection we have used pretrained EAST_Text_detection model, tesseract 
 <img src='https://github.com/Swarupbarua/Live-cam-translator/blob/master/results.png?raw=true' width="800" height="400" />
 
 ## Limitation
-1. Detected text with angle faces issue while translation.
+1. Detected text with angle faces issue while translating.
 2. Because of low datapoints, we achived BLEU score as 67% on our test dataset. In real time this may vary.
 
 ## Future work
