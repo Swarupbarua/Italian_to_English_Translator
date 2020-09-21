@@ -1,8 +1,8 @@
 ## Italian_to_English_Translator
 ## Translate Italian to English using OpenCV, EAST, tesseract and attention mechanism 
 
-Here we are traslating italian language to english from images present in 'text_data' folder.
-This same project can also be used for Live text traslation as well.
+Here we are translating Italian language to English from images present in 'text_data' folder.
+This same project can also be used for Live text traslation as well with a very minimal changes.
 
 For text detection we have used pretrained EAST_Text_detection model, tesseract for text recognition and Attenion layer for translating the recognized text.
 
