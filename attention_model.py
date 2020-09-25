@@ -202,8 +202,10 @@ def predict_att(input_sentence, encoder, one_Step_Decoder,inp_lang, targ_lang, m
 
   return result, input_sentence, attention_plot
   
+# Define function to translate the input text
 def translate_sent(ita_sent, encoder,onestepdecoder,inp_lang, targ_lang, max_length_inp, max_length_targ):
     
+    # If multiple sentence sent as input, split it and process separately
     ita_sent = re.sub(r"(?<!\w\.\w.)(?<![A-Z][a-z]\.)(?<=\.|\?)\s","\n",ita_sent)
     final_res = ''
     for inp in ita_sent.split("\n"):
@@ -229,6 +231,7 @@ def translate_sent(ita_sent, encoder,onestepdecoder,inp_lang, targ_lang, max_len
     final_res = final_res.strip()
     return final_res
 
+# Get the background color of a text
 class GetBGColor():
     def __init__(self, img):
         self.img = img
@@ -236,6 +239,7 @@ class GetBGColor():
         self.w, self.h, self.channels = self.img.shape
         self.total_pixels = self.w*self.h
 
+    # get the count of BGR for each pixel
     def count(self):
         for y in range(0, self.h):
             for x in range(0, self.w):
@@ -245,6 +249,7 @@ class GetBGColor():
                 else:
                     self.manual_count[BGR] = 1
     
+    # Get the average color if most color probability is less than 0.5
     def average_colour(self):
         r = 0
         g = 0
@@ -256,6 +261,7 @@ class GetBGColor():
             r += self.number_counter[top][0][2]
         return (b/sample, g/sample, r/sample)
 
+    # Find the most probable color
     def detect(self):
         self.count()
         self.number_counter = Counter(self.manual_count).most_common(20)
