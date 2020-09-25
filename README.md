@@ -16,7 +16,7 @@ For text detection we have used pretrained EAST_Text_detection model, tesseract 
 
 ## Below is are two sample of the process.
 <img src='https://github.com/Swarupbarua/Italian_to_English_Translator/blob/master/result.png?raw=true' width="800" height="400" />
-<img src='https://github.com/Swarupbarua/Italian_to_English_Translator/blob/master/results1.png?raw=true' width="800" height="400" />
+<img src='https://github.com/Swarupbarua/Italian_to_English_Translator/blob/master/results1.jpg?raw=true' width="800" height="400" />
 
 ## Future work
 1. Here i have used horizontal rectangles to detect angled text. Hence in case of multi lines of angled text, this technique may not work well.
