@@ -14,12 +14,13 @@ For text detection we have used pretrained EAST_Text_detection model, tesseract 
 5. attention_model.py file has all the classes required to test the attention model.
 6. run_attention_from_image.py - file is used to run my model. This file will pick images from 'test_data' folder and translate them.
 
-## Below is a sample of the process.
-<img src='https://github.com/Swarupbarua/Italian_to_English_Translator/blob/master/result.png?raw=true' width="800" height="400" />
-
-## Limitation
-1. Detected text with angle faces issue while translating.
-2. Because of low datapoints, we achived BLEU score as 67% on our test dataset. In real time this may vary.
+## Below is are two sample of the process.
+<img src='https://github.com/Swarupbarua/Italian_to_English_Translator/blob/master/result.png?raw=true' width="800" height="300" />
+<img src='https://github.com/Swarupbarua/Italian_to_English_Translator/blob/master/results1.jpg?raw=true' width="800" height="300" />
 
 ## Future work
-1. Working on text transalation for texts detected in an angle.
+1. Here i have used horizontal rectangles to detect angled text. Hence in case of multi lines of angled text, this technique may not work well.
+
+## Reference
+1. <a href="https://www.pyimagesearch.com/2018/08/20/opencv-text-detection-east-text-detector/"> East text detection </a>
+2. <a href="https://www.pyimagesearch.com/2017/02/20/text-skew-correction-opencv-python/"> Text skew correction </a>
