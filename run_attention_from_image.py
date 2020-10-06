@@ -154,7 +154,7 @@ ind = 0
 #while (cap.isOpened()):
 while (cv2.waitKey(1000) != ord('q') and ind<tot_file):
 
-    
+	start_time = time.time()
     # read images one by one
 	#hasFrame, image = cap.read()
 	image = cv2.imread(file_names[ind])
@@ -278,7 +278,7 @@ while (cv2.waitKey(1000) != ord('q') and ind<tot_file):
 		    angle = -angle        
         
         # If text angle is within 5 to -5 --> it is horizontal line
-		if angle < 5 and angle > -5:
+		if angle < 8 and angle > -8:
 			ag = 0
 			ah = 0
 			if len(bx)==0 :
@@ -288,7 +288,7 @@ while (cv2.waitKey(1000) != ord('q') and ind<tot_file):
 				eY = endY
 				bx.append([sX,sY,eX,eY,ag,ah])
 				continue
-			if endY-eY < 20:
+			if endY-eY < 5:
 				sX = min(startX,sX)
 				sY = max(startY,sY)
 				eX = max(endX,eX)
@@ -424,12 +424,15 @@ while (cv2.waitKey(1000) != ord('q') and ind<tot_file):
 			fullTxt = ''
 			prek = k+1
 	
+	end_time = time.time()
+	duration = end_time - start_time
+	print('Image {} : processing time : {}'.format((ind), duration))
     # Show both original and transalated images
-	image = cv2.resize(image, (500, 320))
-	orig = cv2.resize(orig, (500, 320))
+	image = cv2.resize(image, (400, 450))
+	orig = cv2.resize(orig, (400, 450))
 	cv2.imshow("Original text", image)
 	cv2.imshow("Transalated text", orig)
-	k = cv2.waitKey(30000) & 0xff
+	k = cv2.waitKey(3000) & 0xff
 	if k == 27:    
 		break
 
