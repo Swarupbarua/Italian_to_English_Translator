@@ -23,10 +23,6 @@ For text detection we have used pretrained EAST_Text_detection model, tesseract 
 ## Deployment
 1. I have used EC2 (t2.large) instance to deploy this model using Stremlit framework. Here is a video clip on my model performance.
 https://youtu.be/ROteiT65M7E
-<video width="320" height="240" controls>
-  <source src="https://youtu.be/ROteiT65M7E" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
 
 ## Reference
 1. <a href="https://www.pyimagesearch.com/2018/08/20/opencv-text-detection-east-text-detector/"> East text detection </a>
